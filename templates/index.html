@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function f(i) {
+        if(i < 20) {
+            var d = document.createElement('li');
+            d.innerText = i;
+            document.getElementById('test').append(d)
+            setTimeout(f, 1000,i+1)
+        }
+        else {
+            window.location.href = "http://stackoverflow.com";
+        }
+    }
+</script>
+<body>
+    <input type="button"value="click me" onclick="f(0)">
+    <ul id="test">
+
+    </ul>
+
+</body>
+</html>
